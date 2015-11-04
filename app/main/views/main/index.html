@@ -1,0 +1,13 @@
+<:Title>
+  Home
+
+<:Body>
+  <h1>I'm thinking o fa card...</h1>
+  <h3>Which card is it?</h3>
+  <h4>Score: {{ page._game._score }}</h4>
+  <p>The dealer is looking at '{{ page._game._secret }}' card</p>
+  <ul class="playingCards simpleCards inText table">
+    {{ page._game._cards.each do |card| }}
+      <:cards rank="{{ card._rank }}"/>
+    {{ end }}
+  </ul>
